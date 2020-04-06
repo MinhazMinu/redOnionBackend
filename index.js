@@ -84,5 +84,5 @@ app.post("/placeOrder", (req, res) => {
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log("listining 4200");
+  console.log("listining " + port);
 }); //listing port number
