@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
-// require("dotenv").config();
+require("dotenv").config();
 const app = express(); //creating express Application
 
 app.use(cors()); // cors problem solved
@@ -82,7 +82,7 @@ app.post("/placeOrder", (req, res) => {
     client.close();
   });
 });
-
-app.listen(4200, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
   console.log("listining 4200");
 }); //listing port number
